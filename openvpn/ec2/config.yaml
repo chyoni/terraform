@@ -1,0 +1,6 @@
+context: {}
+
+remote_states:
+  network:
+    organization: "cwchoiit-terraform"
+    workspace: "cwchoiit-terraform-cloud-backend"
