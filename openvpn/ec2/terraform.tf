@@ -4,7 +4,7 @@ terraform {
     organization = "cwchoiit-terraform"
 
     workspaces {
-      name = "cwchoiit-terraform-cloud-backend"
+      name = "openvpn-instance"
     }
   }
 }
