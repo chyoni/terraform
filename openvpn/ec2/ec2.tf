@@ -18,7 +18,7 @@ resource "aws_instance" "private" {
   ami           = data.aws_ami.ubuntu.image_id
   instance_type = "t2.micro"
   subnet_id     = local.subnet_groups["private"].ids[0]
-  key_name      = "cwchoiit-ec2-keypair"
+  key_name      = "cwchoiit-ec2-keypair-home"
 
   vpc_security_group_ids = [
     module.sg__ssh.id,
@@ -43,7 +43,7 @@ resource "aws_instance" "openvpn" {
   ami           = data.aws_ami.ubuntu.image_id
   instance_type = "t2.micro"
   subnet_id     = local.subnet_groups["public"].ids[0]
-  key_name      = "cwchoiit-ec2-keypair"
+  key_name      = "cwchoiit-ec2-keypair-home"
 
   user_data = local.openvpn_userdata
 
